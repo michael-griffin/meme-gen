@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer="true"></script>
+</head>
+<body>
+
+
+<main>
+  <h1>A meme generator</h1>
+  <h2>Fill out the form to create a meme!</h2>
+  <form class="build-form" action="#" method="get">
+    <div class="image-url-container">
+      <label for="image-url">Select Image:</label>
+      <input type="url" name="image-url" id="image-url" placeholder="What image?" required>
+    </div>
+    <div class="top-text-container">
+      <label for="top-text-input">Top Text:</label>
+      <input type="text" name="top-text-input" id="top-text-input" placeholder="Type text here!">
+    </div>
+    <div class="bottom-text-container">
+      <label for="bottom-text-input">Bottom Text:</label>
+      <input type="text" name="bottom-text-input" id="bottom-text-input" placeholder="Optionally, type more.">
+    </div>
+    <button id='generate-btn' type="submit">Generate</button>
+  </form>
+</main>
+
+
+
+<section class="all-memes">
+  <!--A test container:
+  <div class="meme-container">
+    <p class="top-text">Top text here</p>
+    <img class="meme-image" src="puppy-vert.jpg">
+    <p class="bottom-text">Bottom text here</p>
+    <button class="delete-meme">Delete</button>
+  </div>
+  -->
+</section>
+
+
+</body>
+</html>

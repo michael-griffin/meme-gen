@@ -1,0 +1,165 @@
+
+:root {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  --black: #001219;
+  --white: #FCFCFC;
+  --blue: #0569E3;
+  --beige: #F6E7B9;
+  --amber: #EE9B00;
+  /*
+  --dark-teal: #005F73;
+  --teal: #0A9396;
+  --light-teal: #94D2BD;
+
+  --dark-amber: #CA6702;
+  --red-amber: #BB3E03;
+  --red: #AE2012;
+  --dark-red: #9B2226;
+  */
+}
+html, body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  color: var(--black);
+  font-size: 18px;
+}
+body {
+  margin: 1%;
+}
+p {
+  margin: 0px;
+}
+h1 {
+  margin: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+h2 {
+  margin: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 5px 15px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+
+
+main {
+  box-sizing: border-box;
+  min-height: 50%;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--beige);
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 4px solid var(--amber);
+
+}
+
+.build-form {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 10px;
+}
+
+label {
+  display: block;
+  width: 200px;
+  font-weight: 500;
+}
+input[type="text"], input[type="url"] {
+  display: block;
+  width: 65%;
+  height: 24px;
+}
+
+.image-url-container, .top-text-container, .bottom-text-container {
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#generate-btn {
+  margin-top: 10px;
+}
+
+
+
+/*Bottom half of page: display memes
+Each created meme has several parts
+  A container
+  The image
+  Top + Bottom Text
+  a delete button
+Container needs position relative, as all other pieces
+are positioned in reference to it with position:absolute.
+Specifics of positioning for bottomText + button are determined with memes.js
+
+*/
+.all-memes {
+  display: block;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.meme-container {
+  display: block;
+  position: relative;
+  height: auto;
+  width: 400px;
+}
+
+.meme-image {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.top-text, .bottom-text {
+  width: 80%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  height: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 3;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--black);
+  -webkit-text-stroke: 1px var(--white);
+}
+.top-text {
+  top: 30px;
+}
+.bottom-text {
+  bottom: 20px; /*ignored once JavaScript style is applied, using as default*/
+}
+
+.delete-meme {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  bottom: -40px; /*ignored once JavaScript style is applied, using as default*/
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
