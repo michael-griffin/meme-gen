@@ -1,6 +1,5 @@
-//https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-03/puppy-dog-mc-230321-03-b700d4.jpg
-
-
+//Need an image? Why not a trebuchet?
+//https://upload.wikimedia.org/wikipedia/commons/b/b2/Trebuchet_Castelnaud.jpg
 
 let formElement = document.querySelector(".build-form");
 formElement.addEventListener('submit', generateMeme);
@@ -8,7 +7,6 @@ formElement.addEventListener('submit', generateMeme);
 function deleteMeme(evt){
   let memeContainer = evt.target.parentNode;
 
-  //console.log(memeContainer.querySelectorAll('*')); //original idea was forEach with this.
   while (memeContainer.firstChild){
     memeContainer.removeChild(memeContainer.firstChild);
   }

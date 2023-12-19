@@ -6,17 +6,8 @@
   --blue: #0569E3;
   --beige: #F6E7B9;
   --amber: #EE9B00;
-  /*
-  --dark-teal: #005F73;
-  --teal: #0A9396;
-  --light-teal: #94D2BD;
-
-  --dark-amber: #CA6702;
-  --red-amber: #BB3E03;
-  --red: #AE2012;
-  --dark-red: #9B2226;
-  */
 }
+
 html, body {
   margin: 0px;
   height: 100%;
@@ -24,22 +15,27 @@ html, body {
   color: var(--black);
   font-size: 18px;
 }
+
 body {
   margin: 1%;
 }
+
 p {
   margin: 0px;
 }
+
 h1 {
   margin: 20px;
   margin-bottom: 10px;
   font-weight: 500;
 }
+
 h2 {
   margin: 20px;
   margin-bottom: 30px;
   font-weight: 500;
 }
+
 button {
   background-color: var(--blue);
   color: var(--white);
@@ -48,7 +44,7 @@ button {
   border-radius: 5px;
 }
 
-
+/** Styling Top half and input form*/
 
 main {
   box-sizing: border-box;
@@ -109,8 +105,8 @@ Each created meme has several parts
 Container needs position relative, as all other pieces
 are positioned in reference to it with position:absolute.
 Specifics of positioning for bottomText + button are determined with memes.js
-
 */
+
 .all-memes {
   display: block;
   height: 100%;
